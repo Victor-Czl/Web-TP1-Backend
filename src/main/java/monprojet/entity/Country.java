@@ -23,4 +23,10 @@ public class Country {
     @Column(unique=true)
     @NonNull
     private String name;
+
+    @NonNull
+    @OneToMany(mappedBy = "country")
+    @ToString.Exclude
+    private List<City> cities = new ArrayList<>();
+
 }
