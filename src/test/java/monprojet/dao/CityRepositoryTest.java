@@ -1,7 +1,7 @@
 package monprojet.dao;
 
-import static org.hibernate.validator.internal.util.Contracts.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +35,5 @@ public class CityRepositoryTest {
         Country france = countryDAO.findById(1).orElseThrow();
         assertTrue( france.getCities().contains(paris), "France contient Paris");
     }
+
 }
